@@ -226,12 +226,12 @@
     tmp-promise "^3.0.2"
     yaml "^1.5.1"
 
-"@graphprotocol/graph-ts@^0.20.0":
-  version "0.20.1"
-  resolved "https://registry.npmmirror.com/@graphprotocol/graph-ts/download/@graphprotocol/graph-ts-0.20.1.tgz"
-  integrity sha1-QqRRWMWQQiTyjTz2xdH/yHZyD4E=
+"@graphprotocol/graph-ts@^0.25.0":
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/@graphprotocol/graph-ts/-/graph-ts-0.25.0.tgz#74b11effe1d96957004b3f5f0361562ba2b80019"
+  integrity sha512-/R++19dAtqPhd/Bv3l09ubcc8SWrm+akeyYG4yqkg5fk+b5Bm2Bi4Y+CK8B4l3C9mcc2mzJ7s7YisDMmGclqzw==
   dependencies:
-    assemblyscript "git+https://github.com/AssemblyScript/assemblyscript.git#v0.6"
+    assemblyscript "0.19.10"
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
@@ -1504,6 +1504,14 @@ asn1@~0.2.3:
   dependencies:
     safer-buffer "~2.1.0"
 
+assemblyscript@0.19.10:
+  version "0.19.10"
+  resolved "https://registry.yarnpkg.com/assemblyscript/-/assemblyscript-0.19.10.tgz#7ede6d99c797a219beb4fa4614c3eab9e6343c8e"
+  integrity sha512-HavcUBXB3mBTRGJcpvaQjmnmaqKHBGREjSPNsIvnAk2f9dj78y4BkMaSSdvBQYWcDDzsHQjyUC8stICFkD1Odg==
+  dependencies:
+    binaryen "101.0.0-nightly.20210723"
+    long "^4.0.0"
+
 "assemblyscript@git+https://github.com/AssemblyScript/assemblyscript.git#v0.6":
   version "0.6.0"
   resolved "git+ssh://git@github.com/AssemblyScript/assemblyscript.git#3ed76a97f05335504166fce1653da75f4face28f"
@@ -1598,6 +1606,11 @@ binary-extensions@^2.0.0:
   version "2.2.0"
   resolved "https://registry.npm.taobao.org/binary-extensions/download/binary-extensions-2.2.0.tgz?cache=0&sync_timestamp=1610299322955&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbinary-extensions%2Fdownload%2Fbinary-extensions-2.2.0.tgz"
   integrity sha1-dfUC7q+f/eQvyYgpZFvk6na9ni0=
+
+binaryen@101.0.0-nightly.20210723:
+  version "101.0.0-nightly.20210723"
+  resolved "https://registry.yarnpkg.com/binaryen/-/binaryen-101.0.0-nightly.20210723.tgz#b6bb7f3501341727681a03866c0856500eec3740"
+  integrity sha512-eioJNqhHlkguVSbblHOtLqlhtC882SOEPKmNFZaDuz1hzQjolxZ+eu3/kaS10n3sGPONsIZsO7R9fR00UyhEUA==
 
 binaryen@77.0.0-nightly.20190407:
   version "77.0.0-nightly.20190407"
