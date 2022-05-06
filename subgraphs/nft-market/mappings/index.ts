@@ -10,7 +10,7 @@ import {
   CollectionUpdate,
   RevenueClaim,
   Trade,
-} from "../generated/ERC721NFTMarketV1/ERC721NFTMarketV1";
+} from "../generated/MDao3NFTMarket/MDao3NFTMarket";
 import { toBigDecimal } from "./utils";
 import { updateCollectionDayData, updateMarketPlaceDayData } from "./utils/dayUpdates";
 import { fetchBunnyId, fetchName, fetchSymbol, fetchTokenURI } from "./utils/erc721";

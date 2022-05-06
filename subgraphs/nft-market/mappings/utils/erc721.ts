@@ -1,7 +1,7 @@
 /* eslint-disable prefer-const */
 import { Address, BigInt } from "@graphprotocol/graph-ts";
-import { IERC721 } from "../../generated/ERC721NFTMarketV1/IERC721";
-import { MetaDaoNFT } from "../../generated/ERC721NFTMarketV1/MetaDaoNFT";
+import { IERC721 } from "../../generated/MDao3NFTMarket/IERC721";
+import { MetaDaoNFT } from "../../generated/MDao3NFTMarket/MetaDaoNFT";
 
 export function fetchName(collectionAddress: Address): string {
   let contract = IERC721.bind(collectionAddress);
