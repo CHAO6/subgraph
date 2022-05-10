@@ -6,11 +6,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: MDao3NFTMarket
-    network: bsc
+    network: chapel
     source:
-      address: "0xD50566D2343B071c84DA66248d7De3b3DFEAF8Cb"
+      address: "0xA4557429fC7533Cd21B34546121D95F62Df602D5"
       abi: MDao3NFTMarket
-      startBlock: 13514470
+      startBlock: 19156000
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
