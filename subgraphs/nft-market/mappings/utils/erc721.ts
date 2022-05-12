@@ -26,7 +26,7 @@ export function fetchSymbol(collectionAddress: Address): string {
 }
 
 export function fetchTokenURI(collectionAddress: Address, tokenId: BigInt): string | null {
-  let contract = IERC721.bind(collectionAddress);
+  let contract = MetaDaoNFT.bind(collectionAddress);
 
   let tokenURIResult = contract.try_tokenURI(tokenId);
   if (!tokenURIResult.reverted) {

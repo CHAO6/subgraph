@@ -17,7 +17,7 @@ import { fetchBunnyId, fetchName, fetchSymbol, fetchTokenURI } from "./utils/erc
 
 // Constants
 let ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
-let META_DAO_NFT_ADDRESS = "0xF51Fb8De65F85Cb18A2558C1D3769835f526F36c";
+let META_DAO_NFT_ADDRESS = "0x944ce63785727364698e33ab0ebc8986a3c2c58b";
 
 // BigNumber-like references
 let ZERO_BI = BigInt.fromI32(0);
