@@ -21,6 +21,9 @@ type Collection @entity {
   "Total of Trades"
   totalTrades: BigInt!
 
+  "totalSupply"
+  totalSupply: BigInt
+
   "Total volume of collection traded (in BNB)"
   totalVolumeBNB: BigDecimal!
 

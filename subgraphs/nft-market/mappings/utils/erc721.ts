@@ -25,6 +25,17 @@ export function fetchSymbol(collectionAddress: Address): string {
   return "unknown";
 }
 
+export function fetchTotalSupply(collectionAddress: Address): BigInt | null {
+  let contract = MetaDaoNFT.bind(collectionAddress);
+
+  let symbolResult = contract.try_totalSupply();
+  if (!symbolResult.reverted) {
+    return symbolResult.value;
+  }
+
+  return null;
+}
+
 export function fetchTokenURI(collectionAddress: Address, tokenId: BigInt): string | null {
   let contract = MetaDaoNFT.bind(collectionAddress);
 

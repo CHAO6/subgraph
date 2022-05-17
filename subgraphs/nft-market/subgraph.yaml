@@ -8,9 +8,9 @@ dataSources:
     name: MDao3NFTMarket
     network: chapel
     source:
-      address: "0xA4557429fC7533Cd21B34546121D95F62Df602D5"
+      address: "0x1E85B3423a82c6d51E52b2c867b814EF7E349686"
       abi: MDao3NFTMarket
-      startBlock: 19156000
+      startBlock: 19355000
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4

@@ -13,7 +13,7 @@ import {
 } from "../generated/MDao3NFTMarket/MDao3NFTMarket";
 import { toBigDecimal } from "./utils";
 import { updateCollectionDayData, updateMarketPlaceDayData } from "./utils/dayUpdates";
-import { fetchBunnyId, fetchName, fetchSymbol, fetchTokenURI } from "./utils/erc721";
+import {fetchBunnyId, fetchName, fetchSymbol, fetchTokenURI, fetchTotalSupply} from "./utils/erc721";
 
 // Constants
 let ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
@@ -36,6 +36,7 @@ export function handleCollectionNew(event: CollectionNew): void {
     collection.symbol = fetchSymbol(event.params.collection);
     collection.active = true;
     collection.totalTrades = ZERO_BI;
+    collection.totalSupply = fetchTotalSupply(event.params.collection);
     collection.totalVolumeBNB = ZERO_BD;
     collection.numberTokensListed = ZERO_BI;
     collection.creatorAddress = event.params.creator;
@@ -66,6 +67,7 @@ export function handleCollectionUpdate(event: CollectionUpdate): void {
     collection.creatorAddress = event.params.creator;
     collection.tradingFee = toBigDecimal(event.params.tradingFee, 2);
     collection.creatorFee = toBigDecimal(event.params.creatorFee, 2);
+    collection.totalSupply = fetchTotalSupply(event.params.collection);
     collection.whitelistChecker = event.params.whitelistChecker;
     collection.save();
   }
@@ -94,6 +96,7 @@ export function handleAskNew(event: AskNew): void {
 
   let collection = Collection.load(event.params.collection.toHex());
   collection.numberTokensListed = collection.numberTokensListed.plus(ONE_BI);
+  collection.totalSupply = fetchTotalSupply(event.params.collection);
   collection.save();
 
   let token = NFT.load(event.params.collection.toHex() + "-" + event.params.tokenId.toString());
